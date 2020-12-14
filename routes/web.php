@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home.index');
 });
+Route::get('/aboutus',[\App\Http\Controllers\HomeController::class,"aboutus"])->name("aboutus");
+
 //Route::redirect("/anasayfa","/home")->name("anasayfa");
 
 //Route::redirect("/test","/home")->name("anasayfa");
