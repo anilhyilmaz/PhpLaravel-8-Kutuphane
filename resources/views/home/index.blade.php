@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+@extends('layouts.home')
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+@section('title','Sub Page Title')
 
-</body>
-</html>
+@section('sidebar')
+
+    @parent
+    <p>Sub Page Data</p>
+@endsection
+
+@section('content')
+    <p>This is my body content.</p>
+@endsection
+

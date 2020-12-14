@@ -14,16 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.index');
 });
+//Route::redirect("/anasayfa","/home")->name("anasayfa");
 
-Route::get('/home', function () {
-    return view('welcome');
-});
+//Route::redirect("/test","/home")->name("anasayfa");
 
-//Route::get('/home',[\App\Http\Controllers\HomeController::class,"index"]);
-Route::get('/test/{id}',[\App\Http\Controllers\HomeController::class,"test"])->where("id",'[0-9]+');
+//Route::get('/home',[\App\Http\Controllers\HomeController::class,"index"])->name("home");
 
+//Route::get('/test/{id}/{name}',[\App\Http\Controllers\HomeController::class,"test"])->where(["id"=>'[0-9]+',"name"=>"[A-Za-z]+"]);
+
+//Route::get('/test/{id}/{name}',[\App\Http\Controllers\HomeController::class,"test"])->whereNumber("id")->whereAlpha("name")->name("test");
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
