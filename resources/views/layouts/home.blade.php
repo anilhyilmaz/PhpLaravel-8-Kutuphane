@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>@yield('title')</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    @yield('css')
-    @yield('js')
 
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('title')</title>
+    <meta name="description" content=@yield('description')>
+    <meta name="keywords" content=@yield('keywords')>
+    <meta name="author" content="Anıl Haydar Yılmaz">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#03a6f3">
+
+    <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/css/styles.css">
 </head>
 <body>
+@include('home._header')
+@section('content')
 
-<div class="jumbotron text-center">
-    <h1>Header</h1>
-    <p>Resize this responsive page to see the effect!</p>
-    <a href="/">Home</a><br>
-    <a href="/aboutus">About</a>
-    @yield('header')
-</div>
+    İçerik Alanı
+@show
 
-<div class="container">
-    <div class="row">
-        @yield('sidebar')
-        @yield('content')
-    </div>
-</div>
-
-<div class="jumbotron text-center">
-    <h1>Footer</h1>
-    <p>Sayfa altı</p>
-    @yield('footer')
-</div>
+@include('home._footer')
 
 </body>
 </html>
