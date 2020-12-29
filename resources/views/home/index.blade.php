@@ -6,6 +6,7 @@
 @endsection
 @section('keyword','Kitap,kütüphane,yazar,roman,hikaye,bilimkurgu,anı')
 @section('content')
+
     @include('home._slider')
 
     <section class="recomended-sec">

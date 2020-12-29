@@ -19,8 +19,8 @@
 </head>
 <body>
 @include('home._header')
-@section('content')
 
+@section('content')
     İçerik Alanı
 @show
 
