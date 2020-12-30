@@ -210,7 +210,7 @@
                         <h6>We are now offering some good discount
                             on selected books go and shop them</h6>
                         <a href="products.html" class="btn blue-btn">view all books</a>
-                        <span class="icon-point amount"><img src="images/amount.png" alt=""></span>
+                        <span class="icon-point amount"><img src="{{asset('assets')}}/images/amount.png" alt=""></span>
                     </div>
                 </div>
             </div>
