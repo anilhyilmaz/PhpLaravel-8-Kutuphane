@@ -32,6 +32,10 @@ Route::get('/aboutus',[\App\Http\Controllers\HomeController::class,"aboutus"])->
 //Admin
 Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class,"index"])->name("adminhome");
 
+Route::get('/admin/login',[\App\Http\Controllers\HomeController::class,'login'])->name('admin');
+
+Route::post('/admin/logincheck',[\App\Http\Controllers\HomeController::class,"logincheck"])->name("admin_logincheck");
+
 
 
 
