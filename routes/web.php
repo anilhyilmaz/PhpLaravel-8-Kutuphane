@@ -30,13 +30,13 @@ Route::get('/aboutus',[\App\Http\Controllers\HomeController::class,"aboutus"])->
 
 
 //Admin
-Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class,"index"])->name("adminhome");
+Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class,"index"])->name("adminhome")->middleware("auth");
 
-Route::get('/admin/login',[\App\Http\Controllers\HomeController::class,'login'])->name('admin');
+Route::get('/admin/login',[\App\Http\Controllers\HomeController::class,'login'])->name('admin_login');
 
 Route::post('/admin/logincheck',[\App\Http\Controllers\HomeController::class,"logincheck"])->name("admin_logincheck");
 
-
+Route::get("/admin/logout",[\App\Http\Controllers\HomeController::class,'logout'])->name('admin_logout');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
