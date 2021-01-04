@@ -1,3 +1,4 @@
+<section>
 <!-- main content start -->
 <div class="main-content">
 

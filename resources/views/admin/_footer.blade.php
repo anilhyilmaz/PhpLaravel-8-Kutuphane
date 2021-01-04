@@ -62,13 +62,13 @@
 <!-- //close script -->
 
 <!-- disable body scroll when navbar is in active -->
-<script>
-    $(function () {
-        $('.sidebar-menu-collapsed').click(function () {
-            $('body').toggleClass('noscroll');
-        })
-    });
-</script>
+{{--<script>--}}
+{{--    $(function () {--}}
+{{--        $('.sidebar-menu-collapsed').click(function () {--}}
+{{--            $('body').toggleClass('noscroll');--}}
+{{--        })--}}
+{{--    });--}}
+{{--</script>--}}
 <!-- disable body scroll when navbar is in active -->
 
 <!-- loading-gif Js -->
@@ -79,7 +79,7 @@
 {{--        $(".se-pre-con").fadeOut("slow");;--}}
 {{--    });--}}
 {{--</script>--}}
-<!--// loading-gif Js -->
+{{--<!--// loading-gif Js -->--}}
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('assets')}}/admin/js/bootstrap.min.js"></script>

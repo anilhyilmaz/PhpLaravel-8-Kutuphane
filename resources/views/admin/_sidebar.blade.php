@@ -4,7 +4,7 @@
 
         <!-- logo start -->
         <div class="logo">
-            <h1><a href="index.html">Collective</a></h1>
+            <h1><a href="{{route('adminhome')}}">Collective</a></h1>
         </div>
 
         <!-- if logo is image enable this -->
@@ -17,7 +17,7 @@
         <!-- //image logo -->
 
         <div class="logo-icon text-center">
-            <a href="index.html" title="logo"><img src="{{asset('assets')}}/admin/images/logo.png" alt="logo-icon"> </a>
+            <a href="{{route('adminhome')}}" title="logo"><img src="{{asset('assets')}}/admin/images/logo.png" alt="logo-icon"> </a>
         </div>
         <!-- //logo end -->
 
@@ -25,7 +25,7 @@
 
             <!-- sidebar nav start -->
             <ul class="nav nav-pills nav-stacked custom-nav">
-                <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+                <li class="active"><a href="{{route('adminhome')}}"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
                 </li>
                 <li class="menu-list">
                     <a href="#"><i class="fa fa-cogs"></i>
@@ -36,7 +36,7 @@
                         <li><a href="people.html">People cards</a></li>
                     </ul>
                 </li>
-                <li><a href="pricing.html"><i class="fa fa-table"></i> <span>Pricing tables</span></a></li>
+                <li><a href="{{route('admin_category')}}"><i class="fa fa-table"></i> <span>Category</span></a></li>
                 <li><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
                 <li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
             </ul>
