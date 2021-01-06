@@ -16,6 +16,7 @@
                     <li class="breadcrumb-item"><a href="{{route('adminhome')}}">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Category</li>
                 </ol>
+                <a href="{{route('admin_category_add')}}" type="submit" class="btn btn-primary btn-style mt-4"  style="height: 40px">Add Category</a>
             </nav>
             <!-- //breadcrumbs -->
 
@@ -44,9 +45,8 @@
                                             <td>{{$rs->parent_id}}</td>
                                             <td>{{$rs->title}}</td>
                                             <td>{{$rs->status}}</td>
-                                            <td>{{$rs->status}}</td>
                                             <td>Edit</td>
-                                            <td>Delete</td>
+                                            <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')">Delete</a></td>
                                         </tr>
                                     @endforeach
                                     </tbody>
