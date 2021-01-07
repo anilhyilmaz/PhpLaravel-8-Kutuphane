@@ -74,6 +74,13 @@
                             <input type="integer" name="basim_tarihi" value="{{$data->basim_tarihi}}" class="form-control input-style">
                         </div>
                         <div class="form-group">
+                            <label>Image</label>
+                            <input type="file" name="image" value="{{$data->image}}" class="form-control">
+                            @if($data->image)
+                                <img src="{{\Illuminate\Support\Facades\Storage::url($data->image)}}" height="150" alt="">
+                            @endif
+                        </div>
+                        <div class="form-group">
                             <label>Yazar Adı</label>
                             <input type="text" name="yazar_adi" value="{{$data->yazar_adi}}" class="form-control input-style">
                         </div>

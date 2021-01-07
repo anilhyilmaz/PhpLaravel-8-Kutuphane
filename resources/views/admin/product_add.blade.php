@@ -28,7 +28,7 @@
 
             <div class="card card_border py-2 mb-4">
                 <div class="card-body">
-                    <form action="{{route('admin_product_store')}}" method="post">
+                    <form action="{{route('admin_product_store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label>Parent</label>
@@ -92,6 +92,10 @@
                         <div class="form-group">
                             <label>Slug</label>
                             <input type="text" name="slug" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input type="file" name="image" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Status</label>

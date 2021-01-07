@@ -51,7 +51,11 @@
                                             <td>{{$rs->quantity}}</td>
                                             <td>{{$rs->yazar_adi}}</td>
                                             <td>{{$rs->kitap_id}}</td>
-                                            <td>{{$rs->image}}</td>
+                                            <td>
+                                                @if($rs->image)
+                                                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" height="30" alt="">
+                                                    @endif
+                                            </td>
                                             <td>{{$rs->status}}</td>
                                             <td><a href="{{route('admin_product_edit',['id'=>$rs->id])}}">Edit</a></td>
                                             <td><a href="{{route('admin_product_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')">Delete</a></td>
