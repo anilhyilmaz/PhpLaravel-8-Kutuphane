@@ -23,12 +23,11 @@
 
             <div class="card card_border py-2 mb-4">
                 <div class="card-body">
-                    <form action="{{route('admin_category_create')}}" method="post">
+                    <form action="{{route('admin_product_store')}}" method="post">
                         @csrf
                         <div class="form-group">
                             <label>Parent</label>
-                            <select class="custom-select input-style" name="parent_id">
-                                <option value="0">Ana Category</option>
+                            <select class="custom-select input-style" name="category_id">
                                 @foreach($datalist as $rs)
                                     <option value="{{$rs->id}}">{{$rs->title}}</option>
                                 @endforeach
@@ -47,6 +46,38 @@
                             <input type="text" name="description" class="form-control input-style">
                         </div>
                         <div class="form-group">
+                            <label>Category ID</label>
+                            <input type="integer" name="category_id" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>User ID</label>
+                            <input type="integer" name="user_id" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="integer" name="quantity" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Min Quantity</label>
+                            <input type="integer" name="minquantity" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Kitap Basım Tarihi</label>
+                            <input type="integer" name="kitap_id" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Yazar Adı</label>
+                            <input type="text" name="kitap_odunc_alma_tarihi" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Kitap ID</label>
+                            <input type="integer" name="kitap_id" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Detail</label>
+                            <input type="text" name="detail" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
                             <label>Slug</label>
                             <input type="text" name="slug" class="form-control input-style">
                         </div>
@@ -54,10 +85,10 @@
                             <label>Status</label>
                             <select class="custom-select input-style" name="status" required="">
                                 <option selected="selected">False</option>
-                                <option>True</option>
+                                    <option>True</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-style mt-4">Add Category</button>
+                        <button type="submit" class="btn btn-primary btn-style mt-4">Add Product</button>
                     </form>
                 </div>
             </div>
