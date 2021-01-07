@@ -18,7 +18,8 @@ class HomeController extends Controller
     }
     public function logincheck(Request $request){
 
-        if($request->isMethod('post')){
+        if($request->isMethod('post'))
+        {
             $credentials = $request->only('email','password');
             if(Auth::attempt($credentials)){
                 $request->session()->regenerate();

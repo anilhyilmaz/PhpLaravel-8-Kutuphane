@@ -28,9 +28,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="app-cam">
     <form action="{{route('admin_logincheck')}}" method="post">
         @csrf
-        <input type="text" id="email" name="email" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}">
+        <input type="text" id="email" name="email" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == ''){this.value = 'E-mail address';}">
         <input type="password" value="password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
-        <div class="submit"><input type="submit" onclick="myFunction()" value="Login"></div>
+        <div class="submit"> <input type="submit" onclick="myFunction()" value="Login"></div>
         <div class="login-social-link">
             <a href="index.html" class="facebook">
                 Facebook
