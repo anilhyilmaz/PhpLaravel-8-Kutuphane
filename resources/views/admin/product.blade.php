@@ -37,6 +37,7 @@
                                         <th>Yazar Adı</th>
                                         <th>kitap_id</th>
                                         <th>Image</th>
+                                        <th>Image Gallery</th>
                                         <th>Status</th>
                                         <th>Edit</th>
                                         <th>Delete</th>
@@ -53,12 +54,15 @@
                                             <td>{{$rs->kitap_id}}</td>
                                             <td>
                                                 @if($rs->image)
-                                                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" height="30" alt="">
+                                                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->image)}}" height="50" alt="">
                                                     @endif
                                             </td>
+                                            <td><a href="{{route('admin_image_add',['product_id'=>$rs->id])}}" onclick="return !window.open(this.href, '', 'top=50 left=100 width=1100,height=700' )">
+                                                    <img src="{{asset("assets/admin/images")}}/gallery.png" width="30" height="30"> </a>
+                                            </td>
                                             <td>{{$rs->status}}</td>
-                                            <td><a href="{{route('admin_product_edit',['id'=>$rs->id])}}">Edit</a></td>
-                                            <td><a href="{{route('admin_product_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')">Delete</a></td>
+                                            <td><a href="{{route('admin_product_edit',['id'=>$rs->id])}}"><img src="{{asset("assets/admin/images")}}/edit.png"></a></td>
+                                            <td><a href="{{route('admin_product_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset("assets/admin/images")}}/remove.png" height="30" width="30"> </a></td>
                                         </tr>
                                     @endforeach
                                     </tbody>
