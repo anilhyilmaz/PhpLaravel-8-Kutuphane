@@ -11,6 +11,9 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{asset('assets')}}/admin/css/style-starter.css">
 
+    ul.topnav{
+    display: inline;
+    }
     <!-- google fonts -->
     <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
     @yield('css')

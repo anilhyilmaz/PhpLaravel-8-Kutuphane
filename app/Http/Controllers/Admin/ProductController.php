@@ -95,7 +95,6 @@ class ProductController extends Controller
     public function update(Request $request, Product $product,$id)
     {
         $data = Product::find($id);
-
         $data -> title = $request->input('title');
         $data -> keywords = $request->input('keywords');
         $data -> description = $request->input('description');

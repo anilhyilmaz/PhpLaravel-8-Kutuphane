@@ -38,6 +38,7 @@
                 </li>
                 <li><a href="{{route('admin_category')}}"><i class="fa fa-table"></i> <span>Category</span></a></li>
                 <li><a href="{{route('admin_products')}}"><i class="fa fa-th"></i> <span>Products</span></a></li>
+                <li><a href="{{route('admin_setting')}}"><i class="fa fa-th"></i> <span>Setting</span></a></li>
                 <li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
             </ul>
             <!-- //sidebar nav end -->
