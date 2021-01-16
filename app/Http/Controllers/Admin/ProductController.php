@@ -30,7 +30,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $data = Category::with('children')->get();
+        $datalist = Category::with('children')->get();
         return view('admin.product_add',['datalist'=>$datalist]);
     }
 
@@ -55,7 +55,9 @@ class ProductController extends Controller
         $data -> kitap_id = $request->input('kitap_id');
         $data -> detail = $request->input('detail');
         $data -> slug = $request->input('slug');
-        $data -> image = Storage::putFile('images',$request->file('image')); //File Upload
+        if($request->file('image')!=null){
+            $data -> image = Storage::putFile('images',$request->file('image')); //File Upload
+    }
         $data -> status = $request->input('status');
         $data -> save();
         return redirect()->route('admin_products');

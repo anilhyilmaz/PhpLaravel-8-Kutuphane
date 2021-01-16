@@ -40,7 +40,9 @@
                         <div class="col-12 col-sm-12">
                             <div class="card card_border py-2 mb-4">
                                 <div class="card card-primary card-tabs">
+
                                     <div class="card-header p-0 pt-1">
+
                                         <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
                                             <li class="nav-item">
                                                 <a class="nav-link active" id="custom-tabs-one-general-tab"

@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group">
                             <label>Keywords</label>
-                            <input type="text" name="keyword" class="form-control input-style">
+                            <input type="text" name="keywords" class="form-control input-style">
                         </div>
                         <div class="form-group">
                             <label>Description</label>
@@ -69,11 +69,11 @@
                         </div>
                         <div class="form-group">
                             <label>Kitap Basım Tarihi</label>
-                            <input type="integer" name="kitap_id" class="form-control input-style">
+                            <input type="integer" name="basim_tarihi" class="form-control input-style">
                         </div>
                         <div class="form-group">
                             <label>Yazar Adı</label>
-                            <input type="text" name="kitap_odunc_alma_tarihi" class="form-control input-style">
+                            <input type="text" name="yazar_adi" class="form-control input-style">
                         </div>
                         <div class="form-group">
                             <label>Kitap ID</label>

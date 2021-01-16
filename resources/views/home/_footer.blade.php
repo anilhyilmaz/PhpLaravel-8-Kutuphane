@@ -1,13 +1,16 @@
+@php
+    $setting = \App\Http\Controllers\HomeController::getsetting()
+@endphp
+
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <div class="address">
                     <h4>Our Address</h4>
-                    <h6>The BookStore Theme, 4th Store
-                        Beside that building, USA</h6>
-                    <h6>Call : 800 1234 5678</h6>
-                    <h6>Email : info@bookstore.com</h6>
+                    <h6>{{$setting->address}}</h6>
+                    <h6>Call : {{$setting->phone}}</h6>
+                    <h6>Email : {{$setting->email}}</h6>
                 </div>
                 <div class="timing">
                     <h4>Timing</h4>
@@ -20,8 +23,8 @@
                 <div class="navigation">
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="{{route('home')}}">Home</a></li>
+                        <li><a href="{{route('aboutus')}}">About Us</a></li>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-conditions.html">Terms</a></li>
                         <li><a href="products.html">Products</a></li>
@@ -69,11 +72,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="share align-middle">
-                        <span class="fb"><i class="fa fa-facebook-official"></i></span>
-                        <span class="instagram"><i class="fa fa-instagram"></i></span>
-                        <span class="twitter"><i class="fa fa-twitter"></i></span>
-                        <span class="pinterest"><i class="fa fa-pinterest"></i></span>
-                        <span class="google"><i class="fa fa-google-plus"></i></span>
+                        @if($setting->facebook !=null)<span class="fb"><a href='{{$setting->facebook}}' target="_blank"><i class="fa fa-facebook-official"></i></a> </span>@endif
+                        @if($setting->instagram !=null)<span class="fb"><a href='{{$setting->instagram}}' target="_blank"><span class="instagram"><i class="fa fa-instagram"></i></span>@endif
+                        @if($setting->twitter !=null)<span class="fb"><a href='{{$setting->twitter}}' target="_blank"><span class="twitter"><i class="fa fa-twitter"></i></span>@endif
+                        @if($setting->youtube !=null)<span class="fb"><a href='{{$setting->youtube}}' target="_blank"><span class="youtube"><i class="fa fa-youtube"></i></span>@endif
                     </div>
                 </div>
             </div>

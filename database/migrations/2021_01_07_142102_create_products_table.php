@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer('user_id',)->nullable();
             $table->integer('quantity',)->default(1);
             $table->integer('minquantity')->default(5);
-            $table->integer('basim_tarihi')->nullable();
+            $table->string('basim_tarihi')->nullable();
             $table->string('yazar_adi')->nullable();
             $table->integer('kitap_id')->nullable();
             $table->text('detail',)->nullable();

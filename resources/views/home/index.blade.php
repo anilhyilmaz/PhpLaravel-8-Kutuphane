@@ -1,10 +1,15 @@
+@php
+ $setting = \App\Http\Controllers\HomeController::getsetting();
+@endphp
 @extends('layouts.home')
 
-@section('title','Laravel Kütüphane Kitap Ödünç Sitesi')
+@section('title',$setting->title)
 @section('description')
-    AHY kütüphanesinin ödünç kitap alma sitesi
+    {{$setting->description}}
 @endsection
-@section('keyword','Kitap,kütüphane,yazar,roman,hikaye,bilimkurgu,anı')
+@section('keywords',$setting->keywords)
+
+
 @section('content')
 
     @include('home._slider')

@@ -13,10 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+//Route::get('/', function () {
+//    return view('home.index');
+//});
+
+Route::get('/',[\App\Http\Controllers\HomeController::class,"index"])->name("home");
+
+Route::get('/home',[\App\Http\Controllers\HomeController::class,"index"])->name("homepage");
 Route::get('/aboutus',[\App\Http\Controllers\HomeController::class,"aboutus"])->name("aboutus");
+Route::get('/references',[\App\Http\Controllers\HomeController::class,"references"])->name("references");
+Route::get('/fag',[\App\Http\Controllers\HomeController::class,"fag"])->name("fag");
+Route::get('/contact',[\App\Http\Controllers\HomeController::class,"contact"])->name("contact");
+
+
 
 //Route::redirect("/anasayfa","/home")->name("anasayfa");
 
@@ -77,7 +86,7 @@ Route::get('/admin/login',[\App\Http\Controllers\HomeController::class,'login'])
 
 Route::post('/admin/logincheck',[\App\Http\Controllers\HomeController::class,"logincheck"])->name("admin_logincheck");
 
-Route::get("/admin/logout",[\App\Http\Controllers\HomeController::class,'logout'])->name('admin_logout');
+Route::get("/logout",[\App\Http\Controllers\HomeController::class,'logout'])->name('logout');
 
 
 

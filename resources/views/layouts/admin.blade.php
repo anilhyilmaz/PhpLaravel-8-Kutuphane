@@ -21,7 +21,6 @@
 </head>
 <body>
 <body class="sidebar-menu-collapsed">
-<div class="se-pre-con">
 <section>
     @include('admin._sidebar')
     @include('admin._header')
@@ -29,7 +28,6 @@
     @include('admin._footer')
     @yield('footer')
 </section>
-</div>
 </body>
 </body>
 </html>

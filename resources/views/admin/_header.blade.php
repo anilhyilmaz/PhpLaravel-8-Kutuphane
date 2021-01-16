@@ -118,7 +118,7 @@
                                 <li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
                                 <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
                                 <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li>
-                                <li class="logout"> <a href="{{route("admin_logout")}}"><i class="fa fa-power-off"></i>Logout</a> </li>
+                                <li class="logout"> <a href="{{route("logout")}}"><i class="fa fa-power-off"></i>Logout</a> </li>
                                 @endauth
                             </ul>
                         </li>
