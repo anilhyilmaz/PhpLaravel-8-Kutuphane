@@ -11,6 +11,8 @@
                         <li class="navbar-item active">
                             <a href="index.html" class="nav-link">Home</a>
                         </li>
+
+                       @include('home._category')
                         <li class="navbar-item">
                             <a href="shop.html" class="nav-link">Shop</a>
                         </li>
@@ -35,6 +37,7 @@
                     </form>
                 </div>
             </nav>
+
         </div>
     </div>
 </header>
