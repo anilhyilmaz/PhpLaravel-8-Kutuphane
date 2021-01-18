@@ -3,7 +3,7 @@
 @endphp
 @extends('layouts.home')
 
-@section('title','Hakkımızda -' . $setting->title)
+@section('title','Referanslar -' . $setting->title)
 @section('description')
     {{$setting->description}}
 @endsection
@@ -15,7 +15,7 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="{{route('home')}}">Home / </a></li>
-                <li><a href="#"> Hakkımızda</a></li>
+                <li><a href="#"> Referanslar</a></li>
             </ul>
         </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                {!! $setting->aboutus !!}
+                {!! $setting->references !!}
             </div>
         </div>
     </div>

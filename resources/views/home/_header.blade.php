@@ -14,10 +14,10 @@
 
                        @include('home._category')
                         <li class="navbar-item">
-                            <a href="shop.html" class="nav-link">Shop</a>
+                            <a href="{{route('references')}}" class="nav-link">Referanslar</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="about.html" class="nav-link">About</a>
+                            <a href="{{'aboutus'}}" class="nav-link">Hakkımızda</a>
                         </li>
                         <li class="navbar-item">
                             <a href="faq.html" class="nav-link">FAQ</a>
