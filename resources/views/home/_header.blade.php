@@ -23,9 +23,18 @@
                             <a href="faq.html" class="nav-link">FAQ</a>
                         </li>
                         @auth
-                        <li class="navbar-item">
-                            <strong class="text-uppercase"><a href="#" class="nav-link">{{Auth::user()->name}}</a></strong>
-                        </li>
+                            <li class="navbar-item">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 4px">
+                                    {{Auth::user()->name}}
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{route('myprofile')}}">My profile</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+                                </div>
+                            </div></li>
                         @endauth
                         @guest
                             <li class="navbar-item">

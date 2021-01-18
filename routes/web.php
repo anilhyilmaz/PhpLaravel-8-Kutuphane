@@ -78,6 +78,11 @@ Route::prefix('image')->group(function(){
 
 });
 
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
+    Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('myprofile');
+
+});
+
 
 //Admin
 Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class,"index"])->name("adminhome")->middleware("auth");
