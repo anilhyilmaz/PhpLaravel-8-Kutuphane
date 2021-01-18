@@ -20,13 +20,13 @@ class CreateProductsTable extends Migration
             $table->string('description',)->nullable();
             $table->string('image',75)->nullable();
             $table->integer('category_id',)->nullable();
+            $table->string('kitap_adi',50)->nullable();
+            $table->text('detail',)->nullable();
             $table->integer('user_id',)->nullable();
             $table->integer('quantity',)->default(1);
-            $table->integer('minquantity')->default(5);
             $table->string('basim_tarihi')->nullable();
             $table->string('yazar_adi')->nullable();
             $table->integer('kitap_id')->nullable();
-            $table->text('detail',)->nullable();
             $table->string('slug',75);
             $table->string('status',5)->nullable()->default('False');
             $table->timestamps();

@@ -3,11 +3,11 @@
 @endphp
 @extends('layouts.home')
 
-@section('title',$setting->title)
+@section('title','ggg')
 @section('description')
-    {{$setting->description}}
+    'ggg'
 @endsection
-@section('keywords',$setting->keywords)
+@section('keywords','ggg')
 
 
 @section('content')

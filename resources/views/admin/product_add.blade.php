@@ -52,6 +52,10 @@
                             <input type="text" name="description" class="form-control input-style">
                         </div>
                         <div class="form-group">
+                            <label>Kitap Adı</label>
+                            <input type="text" name="kitap_adi" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
                             <label>Category ID</label>
                             <input type="integer" name="category_id" class="form-control input-style">
                         </div>
@@ -62,10 +66,6 @@
                         <div class="form-group">
                             <label>Quantity</label>
                             <input type="integer" name="quantity" class="form-control input-style">
-                        </div>
-                        <div class="form-group">
-                            <label>Min Quantity</label>
-                            <input type="integer" name="minquantity" class="form-control input-style">
                         </div>
                         <div class="form-group">
                             <label>Kitap Basım Tarihi</label>

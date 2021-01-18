@@ -83,6 +83,11 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
 });
 
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+    Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
+
+});
+
 
 //Admin
 Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class,"index"])->name("adminhome")->middleware("auth");

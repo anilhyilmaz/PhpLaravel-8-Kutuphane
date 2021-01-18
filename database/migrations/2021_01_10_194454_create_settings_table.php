@@ -33,7 +33,7 @@ class CreateSettingsTable extends Migration
             $table->string('youtube',100)->nullable();
             $table->text('aboutus',100)->nullable();
             $table->text('contact')->nullable();
-            $table->string('references',)->nullable();
+            $table->text('references',)->nullable();
             $table->string('status',5)->nullable()->default('False');
             $table->timestamps();
         });
