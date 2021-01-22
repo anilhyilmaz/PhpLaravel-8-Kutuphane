@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::get('/aboutus',[\App\Http\Controllers\HomeController::class,"aboutus"])->
 Route::get('/references',[\App\Http\Controllers\HomeController::class,"references"])->name("references");
 Route::get('/fag',[\App\Http\Controllers\HomeController::class,"fag"])->name("fag");
 Route::get('/contact',[\App\Http\Controllers\HomeController::class,"contact"])->name("contact");
+Route::post('/sendmessage',[\App\Http\Controllers\HomeController::class,"sendmessage"])->name("sendmessage");
 
 
 
@@ -62,6 +64,18 @@ Route::prefix('product')->group(function(){
     Route::get('delete/{id}',[\App\Http\Controllers\Admin\ProductController::class,'destroy'])->name('admin_product_delete');
     Route::get('show',[\App\Http\Controllers\Admin\ProductController::class,'show'])->name('admin_product_show');
     });
+
+
+    #
+    Route::prefix('messages')->group(function(){
+        Route::get('/',[MessageController::class,'index'])->name('admin_message');
+        Route::get('edit/{id}',[MessageController::class,'edit'])->name('admin_message_edit');
+        Route::post('update/{id}',[MessageController::class,'update'])->name('admin_message_update');
+        Route::get('delete/{id}',[MessageController::class,'destroy'])->name('admin_message_delete');
+        Route::get('show',[MessageController::class,'show'])->name('admin_product_show');
+    });
+
+
 
 //Product Image Gallery
 Route::prefix('image')->group(function(){
