@@ -47,11 +47,15 @@
                         </div>
                         <div class="form-group">
                             <label>Keywords</label>
-                            <input type="text" name="keyword" value="{{$data->keywords}}" class="form-control input-style">
+                            <input type="text" name="keywords" value="{{$data->keywords}}" class="form-control input-style">
                         </div>
                         <div class="form-group">
                             <label>Description</label>
                             <input type="text" name="description" value="{{$data->description}}" class="form-control input-style">
+                        </div>
+                        <div class="form-group">
+                            <label>Kitap Adı</label>
+                            <input type="text" name="kitap_adi" value="{{$data->kitap_adi}}" class="form-control input-style">
                         </div>
                         <div class="form-group">
                             <label>Category ID</label>
@@ -64,10 +68,6 @@
                         <div class="form-group">
                             <label>Quantity</label>
                             <input type="integer" name="quantity" value="{{$data->quantity}}" class="form-control input-style">
-                        </div>
-                        <div class="form-group">
-                            <label>Min Quantity</label>
-                            <input type="integer" name="minquantity" value="{{$data->minquantity}}" class="form-control input-style">
                         </div>
                         <div class="form-group">
                             <label>Kitap Basım Tarihi</label>

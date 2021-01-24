@@ -102,7 +102,6 @@ class ProductController extends Controller
         $data -> category_id = $request->input('category_id');
         $data -> user_id = Auth::id();
         $data -> quantity = $request->input('quantity');
-        $data -> minquantity = $request->input('minquantity');
         $data -> basim_tarihi = $request->input('basim_tarihi');
         $data -> yazar_adi = $request->input('yazar_adi');
         $data -> kitap_id = $request->input('kitap_id');

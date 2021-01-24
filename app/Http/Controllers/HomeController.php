@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Message;
 use Illuminate\Http\Request;
@@ -19,8 +20,22 @@ class HomeController extends Controller
     }
     public function index(){
         $setting = Setting::first();
-        return view("home.index",['setting'=>$setting]);
+        $slider = Product::select('id','title','image','yazar_adi','slug')->limit(4)->get();
+        #print_r($slider);
+        #exit();
+        $data = [
+            'setting'=>$setting,
+            'slider'=>$slider,
+            'page'=>'home'
+        ];
+        return view("home.index",$data);
 }
+    public function product($id,$slug){
+        $data = Product::find($id);
+        print_r($data);
+        exit();
+    }
+
     public function aboutus(){
         $setting = Setting::first();
         return view("home.about",['setting'=>$setting]);

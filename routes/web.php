@@ -26,6 +26,8 @@ Route::get('/references',[\App\Http\Controllers\HomeController::class,"reference
 Route::get('/fag',[\App\Http\Controllers\HomeController::class,"fag"])->name("fag");
 Route::get('/contact',[\App\Http\Controllers\HomeController::class,"contact"])->name("contact");
 Route::post('/sendmessage',[\App\Http\Controllers\HomeController::class,"sendmessage"])->name("sendmessage");
+Route::get('/product/{id}/{slug}',[\App\Http\Controllers\HomeController::class,"product"])->name("product");
+
 
 
 
