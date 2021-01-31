@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Message;
@@ -38,8 +39,10 @@ class HomeController extends Controller
 }
     public function product($id,$slug){
         $data = Product::find($id);
-        print_r($data);
-        exit();
+        $datalist = Image::where('product_id',$id)->get();
+        #print_r($datalist);
+        #exit();
+        return view('home.product_detail',['data'=>$data,'datalist'=>$datalist]);
     }
 
     #ürün listelenmesi kısmında add to cart bölümüne eklenecektir.

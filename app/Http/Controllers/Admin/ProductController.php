@@ -46,6 +46,7 @@ class ProductController extends Controller
         $data -> title = $request->input('title');
         $data -> keywords = $request->input('keywords');
         $data -> description = $request->input('description');
+        $data -> kitap_adi = $request->input('kitap_adi');
         $data -> category_id = $request->input('category_id');
         $data -> user_id = Auth::id();
         $data -> quantity = $request->input('quantity');
@@ -99,6 +100,7 @@ class ProductController extends Controller
         $data -> title = $request->input('title');
         $data -> keywords = $request->input('keywords');
         $data -> description = $request->input('description');
+        $data -> kitap_adi = $request->input('kitap_adi');
         $data -> category_id = $request->input('category_id');
         $data -> user_id = Auth::id();
         $data -> quantity = $request->input('quantity');
