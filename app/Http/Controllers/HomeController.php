@@ -15,17 +15,23 @@ class HomeController extends Controller
     public static function categorylist(){
         return Category::where('parent_id','=',0)->with('children')->get();
     }
+
     public static function getsetting(){
         return Setting::first();
     }
+
     public function index(){
         $setting = Setting::first();
         $slider = Product::select('id','title','image','yazar_adi','slug')->limit(4)->get();
-        #print_r($slider);
+        $daily = Product::select('id','title','image','yazar_adi','slug')->limit(4)->inRandomOrder()->get();
+        $last = Product::select('id','title','image','yazar_adi','slug')->limit(8)->orderByDesc('id')->get();
+        #print_r($last);
         #exit();
         $data = [
             'setting'=>$setting,
             'slider'=>$slider,
+            'daily'=>$daily,
+            'last'=>$last,
             'page'=>'home'
         ];
         return view("home.index",$data);
@@ -35,6 +41,15 @@ class HomeController extends Controller
         print_r($data);
         exit();
     }
+
+    #ürün listelenmesi kısmında add to cart bölümüne eklenecektir.
+    public function addtocart($id){
+        $data = Product::find($id);
+        print_r($data);
+        exit();
+    }
+
+
     public function categoryproducts($id,$slug){
         $datalist = Product::where('category_id',$id)->get();
         $data = Category::find($id);

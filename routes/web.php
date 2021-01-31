@@ -28,6 +28,9 @@ Route::get('/contact',[\App\Http\Controllers\HomeController::class,"contact"])->
 Route::post('/sendmessage',[\App\Http\Controllers\HomeController::class,"sendmessage"])->name("sendmessage");
 Route::get('/product/{id}/{slug}',[\App\Http\Controllers\HomeController::class,"product"])->name("product");
 Route::get('/categoryproducts/{id}/{slug}',[\App\Http\Controllers\HomeController::class,"categoryproducts"])->name("categoryproducts");
+Route::get('/addtocard/{id}',[\App\Http\Controllers\HomeController::class,"product"])->name("addtocart");
+#Route::get('/addtocard/{id}',[HomeController::class,"index"])->whereNumber('id')->name("addtocart");
+
 
 
 
