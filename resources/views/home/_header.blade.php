@@ -50,10 +50,14 @@
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
                         <span class="quntity">3</span>
                     </div>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search here..." aria-label="Search">
+                    <form class="form-inline my-2 my-lg-0" action="{{route('getproduct')}}" method="post">
+                        @csrf
+                        @livewire('search')
+{{--                        <button type="submit" class="search-btn"><i class="fa fa-search"></i> </button>--}}
+                        <input class="form-control mr-sm-2" type="submit" placeholder="" aria-label="Search">
                         <span class="fa fa-search"></span>
                     </form>
+                    @livewireScripts
                 </div>
             </nav>
 
