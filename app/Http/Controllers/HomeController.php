@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Livewire\Review;
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Image;
 use App\Models\Product;
 use App\Models\Setting;
@@ -47,11 +48,11 @@ class HomeController extends Controller
     public function product($id,$slug){
         $data = Product::find($id);
         $datalist = Image::where('product_id',$id)->get();
-//        $reviews = Review::where('product_id',$id)->get();
+        $reviews = \App\Models\Review::where('product_id',$id)->get();
         #print_r($datalist);
         #exit();
-        return view('home.product_detail',['data'=>$data,'datalist'=>$datalist]);
-//        return view('home.product_detail',['data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews]);
+//        return view('home.product_detail',['data'=>$data,'datalist'=>$datalist]);
+        return view('home.product_detail',['data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews]);
     }
 
     public function getproduct(Request $request){
@@ -99,7 +100,8 @@ class HomeController extends Controller
         return view("home.references",['setting'=>$setting]);
     }
     public function faq(){
-        return view("home.about");
+        $datalist = Faq::all()->sortBy('position');
+        return view("home.faq",['datalist'=>$datalist]);
     }
     public function contact(){
         $setting = Setting::first();

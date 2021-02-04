@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/css/owl.carousel.min.css">
     <link rel="stylesheet" href="{{asset('assets')}}/css/styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    @yield('css')
+    @yield('headerjs')
 </head>
 <body>
 @include('home._header')
@@ -25,6 +28,7 @@
 @show
 
 @include('home._footer')
+@yield('footerjs')
 
 </body>
 </html>

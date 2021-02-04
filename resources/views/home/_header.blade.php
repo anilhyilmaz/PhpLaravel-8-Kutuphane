@@ -17,10 +17,10 @@
                             <a href="{{route('references')}}" class="nav-link">Referanslar</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="{{'aboutus'}}" class="nav-link">Hakkımızda</a>
+                            <a href="{{route('aboutus')}}" class="nav-link">Hakkımızda</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="faq.html" class="nav-link">FAQ</a>
+                            <a href="{{route('faq')}}" class="nav-link">SSS</a>
                         </li>
                         @auth
                             <li class="navbar-item">

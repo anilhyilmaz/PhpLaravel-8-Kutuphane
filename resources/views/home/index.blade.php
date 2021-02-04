@@ -3,12 +3,14 @@
 @endphp
 @extends('layouts.home')
 
-@section('title','ggg')
+@section('title','Anıl Kitap Ödünç Sitesi')
 @section('description')
-    'ggg'
+    'Anıl Kitap Ödünç Sitesi'
 @endsection
-@section('keywords','ggg')
-
+@section('keywords','kitap')
+@section('footerjs')
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+@endsection
 
 @section('content')
 

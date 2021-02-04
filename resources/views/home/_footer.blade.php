@@ -82,6 +82,7 @@
         </div>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="{{asset('assets')}}/js/jquery.min.js"></script>
 <script src="{{asset('assets')}}/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{asset('assets')}}/js/owl.carousel.min.js"></script>
