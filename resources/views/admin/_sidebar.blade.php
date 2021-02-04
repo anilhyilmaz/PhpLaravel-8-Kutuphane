@@ -40,6 +40,7 @@
                 <li><a href="{{route('admin_products')}}"><i class="fa fa-th"></i> <span>Products</span></a></li>
                 <li><a href="{{route('admin_setting')}}"><i class="fa fa-th"></i> <span>Setting</span></a></li>
                 <li><a href="{{route('admin_message')}}"><i class="fa fa-th"></i> <span>Contact Message</span></a></li>
+                <li><a href="{{route('admin_review')}}"><i class="fa fa-th"></i> <span>Review</span></a></li>
             </ul>
             <!-- //sidebar nav end -->
             <!-- toggle button start -->

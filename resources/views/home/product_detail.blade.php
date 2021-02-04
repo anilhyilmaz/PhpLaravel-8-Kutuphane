@@ -66,11 +66,56 @@
 {{--                    </div>--}}
                     <!--/main slider carousel-->
                 </div>
+
+
+{{--                <div>--}}
+{{--                    @php--}}
+{{--                    $avgrev = \App\Http\Controllers\HomeController::avrgreview($data->id);--}}
+{{--                    $countreview = \App\Http\Controllers\HomeController::countreview($data->id);--}}
+{{--                    @endphp--}}
+{{--                    <div class="product-rating">--}}
+{{--                        <i class="fa fa-star @if($rs->rate<1) -o empty @endif"></i>--}}
+{{--                        <i class="fa fa-star @if($rs->rate<2) -o empty @endif"></i>--}}
+{{--                        <i class="fa fa-star @if($rs->rate<3) -o empty @endif"></i>--}}
+{{--                        <i class="fa fa-star @if($rs->rate<4) -o empty @endif"></i>--}}
+{{--                        <i class="fa fa-star @if($rs->rate<5) -o empty @endif"></i>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div class="col-md-6 slider-content">
                     <p>{!! $data->detail !!}</p>
                     <div class="btn-sec">
                         <button class="btn"><a href="{{route('addtocart',['id'=>$data->id])}}">Ödünç Al</a> </button>
                     </div>
+                </div>
+{{--                <p>Review : {{$countreview}}}</p>--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-md-6">--}}
+{{--                        <div class="product-reviews">--}}
+{{--                            @foreach($reviews as $rs)--}}
+{{--                                <div class="single-review">--}}
+{{--                                    <div class="review-heading">--}}
+{{--                                        <div><a href="#"><i class="fa fa-user-o"></i>{{$rs->user->name}} </a> </div>--}}
+{{--                                        <div><a href="#"><i class="fa fa-clock-o"></i>{{$rs->created_at}} </a> </div>--}}
+{{--                                        <div class="review-rating pull-right">--}}
+{{--                                            <i class="fa fa-star @if($rs->rate<1) -o empty @endif"></i>--}}
+{{--                                            <i class="fa fa-star @if($rs->rate<2) -o empty @endif"></i>--}}
+{{--                                            <i class="fa fa-star @if($rs->rate<3) -o empty @endif"></i>--}}
+{{--                                            <i class="fa fa-star @if($rs->rate<4) -o empty @endif"></i>--}}
+{{--                                            <i class="fa fa-star @if($rs->rate<5) -o empty @endif"></i>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="review-body">--}}
+{{--                                        <strong>{{$rs->subject}}</strong>--}}
+{{--                                        <p>{{$rs->review}}</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                @endforeach--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                <div class="col-md-6">
+                    <h4 class="text-uppercase">Write Your review</h4>
+                    @livewire('review',['id'=>$data->id])
                 </div>
             </div>
         </div>
