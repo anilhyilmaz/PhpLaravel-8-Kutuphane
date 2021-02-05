@@ -46,9 +46,10 @@
                         @endguest
                     </ul>
                     <div class="cart my-2 my-lg-0">
+                        <a href="{{route('user_shopcart')}}">
                             <span>
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                        <span class="quntity">3</span>
+                        <span class="quntity">{{\App\Http\Controllers\ShopcartController::countshopcart()}}</span></a>
                     </div>
                     <div class="header-search">
                     <form class="form-inline my-2 my-lg-0" action="{{route('getproduct')}}" method="post">

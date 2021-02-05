@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\ShopcartController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,7 +31,6 @@ Route::get('/contact',[\App\Http\Controllers\HomeController::class,"contact"])->
 Route::post('/sendmessage',[\App\Http\Controllers\HomeController::class,"sendmessage"])->name("sendmessage");
 Route::get('/product/{id}/{slug}',[\App\Http\Controllers\HomeController::class,"product"])->name("product");
 Route::get('/categoryproducts/{id}/{slug}',[\App\Http\Controllers\HomeController::class,"categoryproducts"])->name("categoryproducts");
-Route::get('/addtocard/{id}',[\App\Http\Controllers\HomeController::class,"addtocart"])->name("addtocart");
 Route::post('/getproduct',[\App\Http\Controllers\HomeController::class,"getproduct"])->name("getproduct");
 Route::get('/productlist/{search}/',[\App\Http\Controllers\HomeController::class,"productlist"])->name("productlist");
 
@@ -76,7 +76,7 @@ Route::prefix('product')->group(function(){
     });
 
 
-    #
+    #messages
     Route::prefix('messages')->group(function(){
         Route::get('/',[MessageController::class,'index'])->name('admin_message');
         Route::get('edit/{id}',[MessageController::class,'edit'])->name('admin_message_edit');
@@ -94,6 +94,8 @@ Route::prefix('image')->group(function(){
     Route::get('delete/{id}/{product_id}',[\App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_delete');
     Route::get('show',[\App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
     });
+
+
 
 //Review
     Route::prefix('review')->group(function(){
@@ -131,6 +133,14 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
 
+
+    //Shopcart
+    Route::prefix('shopcart')->group(function(){
+        Route::get('/',[ShopcartController::class,'index'])->name('user_shopcart');
+        Route::post('store/{id}',[ShopcartController::class,'store'])->name('user_shopcart_add');
+        Route::post('update/{id}',[ShopcartController::class,'update'])->name('user_shopcart_update');
+        Route::get('delete/{id}',[ShopcartController::class,'destroy'])->name('user_shopcart_delete');
+    });
 
 });
 

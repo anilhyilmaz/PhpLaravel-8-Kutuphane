@@ -19,7 +19,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $datalist = Product::all();
+//        $datalist = Product::all();
+        $datalist = Product::where('user_id',Auth::id())->get();
         return view('admin.product',['datalist'=>$datalist]);
     }
 
