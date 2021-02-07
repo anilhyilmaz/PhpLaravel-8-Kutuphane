@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{bootstrap, font-awesome, jquery, jquery-1.12.4, jquery-3.5.1, jquery-ui, popper.js, summernote}" />
+    <file url="PROJECT" libraries="{bootstrap, bootstrap-datepicker, font-awesome, jquery, jquery-1.12.4, jquery-3.5.1, jquery-ui, popper.js, summernote, twitter-bootstrap}" />
   </component>
 </project>

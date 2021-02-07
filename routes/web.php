@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ShopcartController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -132,6 +133,21 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::get('/profile',[\App\Http\Controllers\UserController::class,'index'])->name('userprofile');
+
+    //Reservation
+    Route::prefix('reservation')->group(function(){
+        //Route assigned name "admin.users"...
+        Route::get('/',[ReservationController::class,'index'])->name('user_reservations');
+        Route::post('create',[ReservationController::class,'create'])->name('user_reservation_add');
+        Route::post('store',[ReservationController::class,'store'])->name('user_reservation_store');
+        Route::get('edit/{id}',[ReservationController::class,'edit'])->name('user_reservation_edit');
+        Route::post('update/{id}',[ReservationController::class,'update'])->name('user_reservation_update');
+        Route::get('delete/{id}',[ReservationController::class,'destroy'])->name('user_reservation_delete');
+        Route::get('show/{id}',[ReservationController::class,'show'])->name('user_reservation_show');
+    });
+
+
+
 
 
     //Shopcart

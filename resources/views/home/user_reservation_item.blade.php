@@ -3,7 +3,7 @@
 @endphp
 @extends('layouts.home')
 
-@section('title','Alışveriş Sepeti')
+@section('title','Sipariş Kitaplarım')
 @section('javascript')
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <link id="bs-css" href="https://netdna.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="#">User Profile</a></li>
+                <li><a href="#">Sipariş Kitaplarım </a></li>
             </ul>
         </div>
     </div>
@@ -42,47 +42,27 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @php
-                            $date = 0;
-                        @endphp
                         @include('home.message')
                         @foreach($datalist as $rs)
                             <tr>
-                                <td class="thumb">
-                                    @if($rs->product->image)
-                                        <img src="{{\Illuminate\Support\Facades\Storage::url($rs->product->image)}}"
-                                             height="45"
-                                             alt="">
-                                    @endif
-                                </td>
                                 <td>
-                                    <a href="{{route('product',['id'=>$rs->product->id,'slug'=>$rs->product->slug])}}">{{$rs->product->title}}</a>
+                                @if($rs->product->image)
+                                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->product->image)}}" height="50" alt="">
+                                    @endif
+                                    </td>
+                                <td><a href="{{route('product',['id'=>$rs->product->id,'slug'=>$rs->product->slug])}}">
+                                        {{$rs->product->title}}</a>
                                 </td>
                                 <td>{{$rs->product->yazar_adi}}</td>
-                                <td>
-                                    <a href="{{route('user_shopcart_delete',['id'=>$rs->id])}}"
-                                       onclick="return confirm('Delete! Are you sure?')"><img
-                                            src="{{asset('assets/admin/images')}}/remove.png" style="height: 25px"></a>
-                                </td>
+                                <td><a href="{{route('user_reservation_show',['id'=>$rs->id])}}"><img src="{{asset("assets/admin/images")}}/edit.png" style="height: 30px"></a></td>
+
                             </tr>
                         @endforeach
                         </tbody>
                     </table>
-                    <form action="{{route('user_reservation_add')}}" method="post">
-                        <td>
-                            <label for="reservation_date">Rezervasyon Tarihi:</label>
-                            <input type="date" id="reservation_date" name="reservation_date">
-                        </td>
-                        <td>
-                            <label for="reservation">Rezervasyon Bitiş Tarihi:</label>
-                            <input type="date" id="reservation_finish_date" name="reservation_finish_date">
-                        </td>
-                        <div class="float-right">
-                            @csrf
-                            <button type="submit" class="btn">Ödünç Almayı Onayla</button>
-                        </div>
-                    </form>
                 </div>
+                </form>
+            </div>
             </div>
         </div>
     </div>
