@@ -38,7 +38,7 @@
                             <th>Fotograf</th>
                             <th>Kitap Adı</th>
                             <th>Yazar Adı</th>
-                            <th style="" colspan="3">Durumlar</th>
+                            <th>Rezervasyon Durumu</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -54,8 +54,7 @@
                                         {{$rs->product->title}}</a>
                                 </td>
                                 <td>{{$rs->product->yazar_adi}}</td>
-                                <td><a href="{{route('user_reservation_show',['id'=>$rs->id])}}"><img src="{{asset("assets/admin/images")}}/edit.png" style="height: 30px"></a></td>
-
+                                <td>{{$rs->status}}</td>
                             </tr>
                         @endforeach
                         </tbody>

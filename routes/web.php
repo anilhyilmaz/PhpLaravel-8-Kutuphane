@@ -118,6 +118,20 @@ Route::prefix('image')->group(function(){
         Route::get('show',[FaqController::class,'show'])->name('admin_faq_show');
     });
 
+    //Admin Reservation
+    Route::prefix('reservation')->group(function(){
+        //Route assigned name "admin.users"...
+        Route::get('/',[\App\Http\Controllers\Admin\ReservationController::class,'index'])->name('admin_reservations');
+        Route::get('list/{status}',[\App\Http\Controllers\Admin\ReservationController::class,'list'])->name('admin_reservation_list');
+        Route::post('create',[\App\Http\Controllers\Admin\ReservationController::class,'create'])->name('admin_reservation_add');
+        Route::post('store',[\App\Http\Controllers\Admin\ReservationController::class,'store'])->name('admin_reservation_store');
+        Route::get('edit/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'edit'])->name('admin_reservation_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'update'])->name('admin_reservation_update');
+        Route::post('itemupdate/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'itemupdate'])->name('admin_reservation_item_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'destroy'])->name('admin_reservation_delete');
+        Route::get('show/{id}',[\App\Http\Controllers\Admin\ReservationController::class,'show'])->name('admin_reservation_show');
+    });
+
 #Setting
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');

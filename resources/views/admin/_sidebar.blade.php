@@ -27,17 +27,20 @@
             <ul class="nav nav-pills nav-stacked custom-nav">
                 <li class="active"><a href="{{route('adminhome')}}"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
                 </li>
-                <li class="menu-list">
-                    <a href="#"><i class="fa fa-cogs"></i>
-                        <span>Elements <i class="lnr lnr-chevron-right"></i></span></a>
-                    <ul class="sub-menu-list">
-                        <li><a href="carousels.html">Carousels</a> </li>
-                        <li><a href="cards.html">Default cards</a> </li>
-                        <li><a href="people.html">People cards</a></li>
-                    </ul>
-                </li>
                 <li><a href="{{route('admin_category')}}"><i class="fa fa-table"></i> <span>Category</span></a></li>
                 <li><a href="{{route('admin_products')}}"><i class="fa fa-th"></i> <span>Products</span></a></li>
+                <li class="menu-list">
+                    <a href="{{route('admin_reservations')}}"><i class="fa fa-cogs"></i>
+                        <span>Seçenekler <i class="lnr lnr-chevron-right"></i></span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="{{route('admin_reservations')}}">Tüm Rezervasyonlar</a> </li>
+                        <li><a href="{{route('admin_reservation_list',['status'=>'new'])}}">Yeni Rezervasyonlar</a> </li>
+                        <li><a href="{{route('admin_reservation_list',['status'=>'accepted'])}}">Kabul Edilen Rezervasyonlar</a> </li>
+                        <li><a href="{{route('admin_reservation_list',['status'=>'canceled'])}}">İptal Edilen Rezervasyonlar</a> </li>
+                        <li><a href="{{route('admin_reservation_list',['status'=>'completed'])}}">Tamamlanan Rezervasyonlar</a> </li>
+                        <li><a href="{{route('admin_reservation_list',['status'=>'shipping'])}}">Paketlenen Rezervasyonlar</a> </li>
+                    </ul>
+                </li>
                 <li><a href="{{route('admin_setting')}}"><i class="fa fa-th"></i> <span>Setting</span></a></li>
                 <li><a href="{{route('admin_message')}}"><i class="fa fa-th"></i> <span>Contact Message</span></a></li>
                 <li><a href="{{route('admin_review')}}"><i class="fa fa-th"></i> <span>Review</span></a></li>

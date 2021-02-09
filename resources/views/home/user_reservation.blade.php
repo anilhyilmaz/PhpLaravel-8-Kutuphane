@@ -48,6 +48,7 @@
                                 <td>{{$rs->id}}</td>
                                 <td>{{$rs->user_id}}</td>
                                 <td>{{$rs->created_at}}</td>
+                                <td>{{$rs->status}}</td>
                                 <td><a href="{{route('user_reservation_show',['id'=>$rs->id])}}"><img src="{{asset("assets/admin/images")}}/edit.png" style="height: 30px"></a></td>
                                 <td><a href="{{route('user_reservation_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset("assets/admin/images")}}/remove.png" height="30" width="30"> </a></td>
 
