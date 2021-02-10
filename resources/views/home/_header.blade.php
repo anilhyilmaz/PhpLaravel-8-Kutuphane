@@ -28,6 +28,7 @@
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 4px">
                                     {{Auth::user()->name}}
+                                    {{Auth::user()->roles->pluck('name')}}
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{route('myprofile')}}">My profile</a>

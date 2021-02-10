@@ -26,6 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <h2 class="form-heading">login</h2>
 <div class="app-cam">
+    @include('home.message')
     <form action="{{route('admin_logincheck')}}" method="post">
         @csrf
         <input type="text" id="email" name="email" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == ''){this.value = 'E-mail address';}">
