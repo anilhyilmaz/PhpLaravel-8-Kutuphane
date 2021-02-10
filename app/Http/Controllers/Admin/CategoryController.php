@@ -118,6 +118,7 @@ class CategoryController extends Controller
         $data->status = $request->input('status');
 
         $data->save();
+        return redirect()->route('admin_category')->with('success','Kategori Güncellendi!');
     }
 
     /**

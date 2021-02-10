@@ -14,8 +14,7 @@
             <nav aria-label="breadcrumb" class="mb-4">
                 <ol class="breadcrumb my-breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Elements</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Content Blocks</li>
+                    <li class="breadcrumb-item active" aria-current="page">Rezervasyonlar</li>
                 </ol>
             </nav>
             <!-- //breadcrumbs -->
@@ -43,7 +42,9 @@
                             @foreach($datalist as $rs)
                                 <tr>
                                     <td>{{$rs->id}}</td>
-                                    <td>{{$rs->user->name}}</td>
+                                    <td><a href="{{route('admin_user_show',['id'=>$rs->user->id])}}"
+                                           onclick="return !window.open(this.href, '', 'top=50 left=100 width=800,height=600' )">
+                                            {{$rs->user->name}}</a></td>
                                     <td>{{$rs->product_id}}</td>
                                     <td>{{$rs->product_date}}</td>
                                     <td>{{$rs->returndate}}</td>

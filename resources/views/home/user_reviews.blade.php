@@ -52,7 +52,7 @@
                                     <td>{{$rs->status}}</td>
                                     <td>{{$rs->created_at}}</td>
                                     <td>
-                                        <a href="{{route('admin_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset('assets/admin/images')}}/delete.png"></a>
+                                        <a href="{{route('admin_review_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset('assets/admin/images')}}/remove.png" style="height: 30px"></a>
                                     </td>
                                 </tr>
                             @endforeach

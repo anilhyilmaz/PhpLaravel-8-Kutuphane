@@ -42,16 +42,14 @@
     </section>
     <section class="about-sec">
         <div class="about-img">
-            <figure style="background:url({{asset('assets')}}/images/about-img.jpg)no-repeat;"></figure>
+            <img src="{{asset('assets')}}/images/kutuphane.jpg">
         </div>
         <div class="about-content">
-            <h2>About bookstore,</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. Lorem Ipsum has been the book. </p>
-            <p>It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and</p>
-            <div class="btn-sec">
-                <a href="shop.html" class="btn yellow">shop books</a>
-                <a href="login.html" class="btn black">subscriptions</a>
-            </div>
+            <h2>Kütüphanemiz Hakkında</h2>
+            <p>Üniversitemizin ise 10. kuruluş yıl dönümü olan 3 Nisan 2017 yılında taşınılmış olup kütüphane binası hayırsever
+                iş adamı Kamil GÜLEÇ tarafından eğitime % 100 destek kapsamında yaptırılmıştır.
+            <p>4000 m² olan Merkez Kamil Güleç Kütüphane Binası  iklimlendirilmiş çalışma ve araştırma alanlarının yanı sıra peyzajlı yeşil alanlar ve sanat galerisi ile rafa dizilmiş kitapları gösteren dikkat çekici bir mimariye sahiptir. </p>
+            </p>
         </div>
     </section>
 
@@ -105,96 +103,4 @@
         </div>
     </section>
 
-
-    <section class="features-sec">
-        <div class="container">
-            <ul>
-                <li>
-                    <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                    <h3>SAFE SHOPPING</h3>
-                    <h5>Safe Shopping Guarantee</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-                <li>
-                    <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
-                    <h3>30- DAY RETURN</h3>
-                    <h5>Moneyback guarantee</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-                <li>
-                    <span class="icon chat"><i class="fa fa-comments" aria-hidden="true"></i></span>
-                    <h3>24/7 SUPPORT</h3>
-                    <h5>online Consultations</h5>
-                    <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</h6>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="offers-sec" style="background:url({{asset('assets')}}/images/offers.jpg)no-repeat;">
-        <div class="cover"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="detail">
-                        <h3>Top 50% OFF on Selected</h3>
-                        <h6>We are now offering some good discount
-                            on selected books go and shop them</h6>
-                        <a href="products.html" class="btn blue-btn">view all books</a>
-                        <span class="icon-point percentage">
-                            <img src="{{asset('assets')}}/images/precentagae.png" alt="">
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="detail">
-                        <h3>Shop $ 500 Above and Get Extra!</h3>
-                        <h6>We are now offering some good discount
-                            on selected books go and shop them</h6>
-                        <a href="products.html" class="btn blue-btn">view all books</a>
-                        <span class="icon-point amount"><img src="{{asset('assets')}}/images/amount.png" alt=""></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="testimonial-sec">
-        <div class="container">
-            <div id="testimonal" class="owl-carousel owl-theme">
-                <div class="item">
-                    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
-                    <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
-                    <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
-                    <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. been the book</h3>
-                    <div class="box-user">
-                        <h4 class="author">Susane Mathew</h4>
-                        <span class="country">Australia</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="left-quote">
-            <img src="{{asset('assets')}}/images/left-quote.png" alt="quote">
-        </div>
-        <div class="right-quote">
-            <img src="{{asset('assets')}}/images/right-quote.png" alt="quote">
-        </div>
-    </section>
 @endsection

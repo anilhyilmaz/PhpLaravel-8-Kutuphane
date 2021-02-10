@@ -7,43 +7,21 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="address">
-                    <h4>Our Address</h4>
+                    <h4>Adres</h4>
                     <h6>{{$setting->address}}</h6>
                     <h6>Call : {{$setting->phone}}</h6>
                     <h6>Email : {{$setting->email}}</h6>
                 </div>
                 <div class="timing">
-                    <h4>Timing</h4>
-                    <h6>Mon - Fri: 7am - 10pm</h6>
-                    <h6>​​Saturday: 8am - 10pm</h6>
-                    <h6>​Sunday: 8am - 11pm</h6>
+                    <h4>Zaman</h4>
+                    <h6>Pazartesi-Cuma: 09:00-17:00</h6>
+                    <h6>Cumartesi:11:00-15:00</h6>
+                    <h6>Pazar: Kapalı</h6>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="navigation">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="{{route('home')}}">Home</a></li>
-                        <li><a href="{{route('aboutus')}}">About Us</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-conditions.html">Terms</a></li>
-                        <li><a href="products.html">Products</a></li>
-                    </ul>
-                </div>
-                <div class="navigation">
-                    <h4>Help</h4>
-                    <ul>
-                        <li><a href="">Shipping & Returns</a></li>
-                        <li><a href="privacy-policy.html">Privacy</a></li>
-                        <li><a href="faq.html">FAQ’s</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-5">
+            <div class="col-md-8">
                 <div class="form">
-                    <h3>Quick Contact us</h3>
-                    <h6>We are now offering some good discount
-                        on selected books go and shop them</h6>
+                    <h3>Hızlı İletişim</h3>
                     <form>
                         <div class="row">
                             <div class="col-md-6">

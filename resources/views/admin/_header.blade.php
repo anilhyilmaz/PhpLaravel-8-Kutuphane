@@ -4,6 +4,7 @@
     <!-- notification menu start -->
     <div class="menu-right">
         <div class="navbar user-panel-top">
+            @include('home.message')
             <div class="search-box">
                 <form action="#search-results.html" method="get">
                     <input class="search-input" placeholder="Search Here..." type="search" id="search">
@@ -101,12 +102,11 @@
                         <li class="dropdown profile_details_drop">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true"
                                aria-expanded="false">
-                                <div class="profile_img">
-                                    <img src="{{asset('assets')}}/admin/images/profileimg.jpg" class="rounded-circle" alt="" />
-                                    <div class="user-active">
-                                        <span></span>
+                                    <div class="profile_img">
+                                        @if(Auth::user()->profile_photo_path)
+                                            <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="200" style="border-radius: 10px" alt="" class="rounded-circle">
+                                        @endif
                                     </div>
-                                </div>
                             </a>
                             <ul class="dropdown-menu drp-mnu" aria-labelledby="dropdownMenu3">
                                 <li class="user-info">

@@ -7,12 +7,12 @@
             <li><a href="{{route('myreviews')}}">Yorumlar</a></li>
             <li><a href="{{route('user_shopcart')}}">Sepet</a></li>
             <li><a href="{{route('logout')}}">Çıkış</a></li>
-{{--            @php--}}
-{{--                $userRoles = Auth::user()->roles->pluck('name');--}}
-{{--            @endphp--}}
-{{--            @if($userRoles->contains('admin'))--}}
-{{--            <li><a href="{{route('admin_home')}}">Admin Panel</a></li>--}}
-{{--            @endif--}}
+            @php
+                $userRoles = Auth::user()->roles->pluck('name');
+            @endphp
+            @if($userRoles->contains('admin'))
+            <li><a href="{{route('adminhome')}}">Admin Panel</a></li>
+            @endif
         </ul>
     </div>
 @endauth
