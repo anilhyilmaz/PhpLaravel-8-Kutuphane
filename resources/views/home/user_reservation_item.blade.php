@@ -47,10 +47,11 @@
                             <tr>
                                 <td>
                                 @if($rs->product->image)
-                                    <img src="{{\Illuminate\Support\Facades\Storage::url($rs->product->image)}}" height="50" alt="">
+                                    <img src="{{Storage::url($rs->product->image)}}" height="50" alt="">
                                     @endif
                                     </td>
-                                <td><a href="{{route('product',['id'=>$rs->product->id,'slug'=>$rs->product->slug])}}">
+                                <td>
+                                    <a href="{{route('product',['id'=>$rs->product->id,'slug'=>$rs->product->slug])}}">
                                         {{$rs->product->title}}</a>
                                 </td>
                                 <td>{{$rs->product->yazar_adi}}</td>

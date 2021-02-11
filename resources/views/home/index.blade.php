@@ -3,9 +3,9 @@
 @endphp
 @extends('layouts.home')
 
-@section('title','Anıl Kitap Ödünç Sitesi')
+@section('title','Kbü Kitap Ödünç Sitesi')
 @section('description')
-    'Anıl Kitap Ödünç Sitesi'
+    'Kbü Kitap Ödünç Sitesi'
 @endsection
 @section('keywords','kitap')
 @section('footerjs')

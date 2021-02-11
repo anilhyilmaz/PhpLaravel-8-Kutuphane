@@ -47,23 +47,23 @@ class ReservationController extends Controller
     {
 
 
-        $datalist = Shopcart::where('user_id',Auth::id())->get();
-        foreach ($datalist as $rs){
-            $data2 = new Orderitem;
-            $data2->user_id = Auth::id();
-            $data2->product_id = $rs->product_id;
-            $data2->order_id = $rs->id;
-            $data2->save();
-        }
-
         $data = new Reservation;
         $data -> user_id = Auth::id();
         $data -> product_date = $request->input('reservation_date');
         $data -> returndate = $request->input('reservation_finish_date');
         $data -> days = $request->input('days');
         $data -> IP = $_SERVER['REMOTE_ADDR'];
-
         $data -> save();
+
+        $datalist = Shopcart::where('user_id',Auth::id())->get();
+        foreach ($datalist as $rs){
+            $data2 = new Orderitem;
+            $data2->user_id = Auth::id();
+            $data2->product_id = $rs->product_id;
+            $data2->order_id = $data->id;
+            $data2->save();
+        }
+
         $data3 = Shopcart::where('user_id',Auth::id());
         $data3->delete();
         return redirect()->route('user_reservations')->with('success','Rezervasyon Gönderildi');
