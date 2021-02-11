@@ -21,6 +21,9 @@
                         <li class="navbar-item">
                             <a href="{{route('faq')}}" class="nav-link">SSS</a>
                         </li>
+                        <li class="navbar-item">
+                            <a href="{{route('contact')}}" class="nav-link">İletişim</a>
+                        </li>
                         @auth
                             <li class="navbar-item">
                             <div class="dropdown">

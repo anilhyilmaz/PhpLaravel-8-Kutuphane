@@ -28,7 +28,6 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Kullanıcı</th>
-                                <th>Ürün ID</th>
                                 <th>Rezervasyon Başlangıç</th>
                                 <th>Rezervasyon Bitiş</th>
                                 <th>Toplam Gün</th>
@@ -45,7 +44,6 @@
                                     <td><a href="{{route('admin_user_show',['id'=>$rs->user->id])}}"
                                            onclick="return !window.open(this.href, '', 'top=50 left=100 width=800,height=600' )">
                                             {{$rs->user->name}}</a></td>
-                                    <td>{{$rs->product_id}}</td>
                                     <td>{{$rs->product_date}}</td>
                                     <td>{{$rs->returndate}}</td>
                                     <td>{{$rs->days}}</td>

@@ -10,6 +10,7 @@
 @section('keywords','kitap')
 @section('footerjs')
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="{{asset('assets')}}/js/owl.carousel.min.js"></script>
 @endsection
 
 @section('content')

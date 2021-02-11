@@ -27,10 +27,6 @@
                             <th>Ad</th>
                             <td>{{$data->user->name}}</td>
                         <tr>
-                            <th>Ürün ID</th>
-                            <td>{{$data->product_id}}</td>
-                        </tr>
-                        <tr>
                             <th>Rezervasyon Başlangıç Tarihi</th>
                             <td>{{$data->product_date}}</td>
                         </tr>

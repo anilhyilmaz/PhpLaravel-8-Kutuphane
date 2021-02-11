@@ -20,21 +20,22 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="form">
+                <div class="form ">
                     <h3>Hızlı İletişim</h3>
-                    <form>
+                    <form id="checkout_form" class="clearfix" action="{{route('sendmessage')}}" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <input placeholder="Name" required>
+                                <input placeholder="Name" type="text" name="name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" type="text" name="email" placeholder="Email" required>
                             </div>
                             <div class="col-md-12">
-                                <textarea placeholder="Messege"></textarea>
+                                <textarea placeholder="Messege" name="message"></textarea>
                             </div>
                             <div class="col-md-12">
-                                <button class="btn black">Alright, Submit</button>
+                                <button class="btn black">Gönder</button>
                             </div>
                         </div>
                     </form>

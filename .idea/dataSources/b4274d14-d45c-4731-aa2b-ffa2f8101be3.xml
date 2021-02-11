@@ -1577,7 +1577,6 @@ tokenable_id</ColNames>
     <column id="452" parent="346" name="product_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="453" parent="346" name="product_date">
       <Position>4</Position>

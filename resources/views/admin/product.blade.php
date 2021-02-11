@@ -22,11 +22,8 @@
 
             <!-- content block style 1-->
             <div class="card card_border p-lg-4 p-3 mb-4">
-                <div class="card-body py-3 p-0">
-                    <div class="row">
-                        <div class="col-lg-6 align-self pr-lg-4">
-
-                            <div class="col-sm-25">
+                <div class="card">
+                    <div class="card-body">
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
@@ -59,7 +56,7 @@
                                                     <img src="{{asset("assets/admin/images")}}/gallery.png" width="30" height="30"> </a>
                                             </td>
                                             <td>{{$rs->status}}</td>
-                                            <td><a href="{{route('admin_product_edit',['id'=>$rs->id])}}"><img src="{{asset("assets/admin/images")}}/edit.png"></a></td>
+                                            <td><a href="{{route('admin_product_edit',['id'=>$rs->id])}}"><img src="{{asset("assets/admin/images")}}/edit.png" style="height: 25px"></a></td>
                                             <td><a href="{{route('admin_product_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset("assets/admin/images")}}/remove.png" height="30" width="30"> </a></td>
                                         </tr>
                                     @endforeach
@@ -67,9 +64,6 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
             <!-- //content block style 1-->
 
             <!-- content block style 1-->

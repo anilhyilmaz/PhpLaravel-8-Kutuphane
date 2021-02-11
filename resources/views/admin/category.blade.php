@@ -24,35 +24,35 @@
             <div class="card card_border p-lg-4 p-3 mb-4">
                 <div class="card">
                     <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>Id</th>
-                                        <th>Parent</th>
-                                        <th>Title</th>
-                                        <th>Status</th>
-                                        <th>Edit</th>
-                                        <th>Delete</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach($datalist as $rs)
-                                        <tr>
-                                            <td>{{$rs->id}}</td>
-                                            <td>
-                                                {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}
-                                            </td>
-                                            <td>{{$rs->title}}</td>
-                                            <td>{{$rs->status}}</td>
-                                            <td><a href="{{route('admin_category_edit',['id'=>$rs->id])}}">Edit</a></td>
-                                            <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')">Delete</a></td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Parent</th>
+                                <th>Title</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($datalist as $rs)
+                                <tr>
+                                    <td>{{$rs->id}}</td>
+                                    <td>
+                                        {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}
+                                    </td>
+                                    <td>{{$rs->title}}</td>
+                                    <td>{{$rs->status}}</td>
+                                    <td><a href="{{route('admin_category_edit',['id'=>$rs->id])}}"><img src="{{asset("assets/admin/images")}}/edit.png" style="height: 25px"></a></td>
+                                    <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('Delete! Are you sure?')"><img src="{{asset("assets/admin/images")}}/remove.png" height="30" width="30"> </a></td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
+                </div>
+            </div>
             <!-- //content block style 1-->
 
             <!-- content block style 1-->
@@ -76,5 +76,4 @@
 @endsection
 @section('footer')
 
-    @endsection
-
+@endsection
